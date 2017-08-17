@@ -4,7 +4,6 @@ var Queue = function() {
 
 
 var newQueue = {}
-  newQueue.someInstance = {}
   newQueue.front = 0
   newQueue.back = 0
   newQueue.storage = {}
