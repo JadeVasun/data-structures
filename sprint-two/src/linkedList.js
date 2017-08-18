@@ -20,12 +20,25 @@ var LinkedList = function() {
   };
 
   list.removeHead = function() {
-    list.head = list.head.next;
     var result = list.head.value;
+    list.head = list.head.next;
     return result;
   };
 
   list.contains = function(target) {
+    if (list.tail.value === target) {
+      return true;
+    }
+
+    var current = list.head
+    while (current) {
+      if (current.value === target) {
+        return true;
+        current = current.next;
+      } else {
+        return false;
+      }
+    }
   };
 
   return list;
