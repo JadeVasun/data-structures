@@ -33,6 +33,17 @@ searchTreeMethods.contains = function (value) {
 	return false; 	
 }
 
+searchTreeMethods.depthFirstLog = function (cb) {
+	cb(this.value);
+	if (this.left) {
+		this.left.depthFirstLog(cb);	
+	} 
+
+	if (this.right) {
+	  this.right.depthFirstLog(cb);
+	}
+}
+
 
 /*
  * Complexity: What is the time complexity of the above functions?
